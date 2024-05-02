@@ -1,0 +1,143 @@
+body {
+    background-image: url(../images/mountainbackg7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/* Header */
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    border-bottom: solid 1px #c6c1c1;
+    background-color: rgba(61, 88, 109, 0.836);
+    text-shadow:rgb(7, 7, 7);
+    top: 0px;
+    left: 0px;
+}
+
+header .banner {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+  
+header .logo {
+    flex: 1;
+    color: rgba(246, 246, 244, 0.808);
+    font-weight: 600;
+    font-size: 20px;
+    font-family: system-ui;
+    font-weight: bold;
+}
+  
+header nav ul {
+    display: flex;
+}
+  
+nav li {
+    padding-left: 10px;
+    width: 100px;
+    color: rgba(246, 246, 244, 0.808);
+    font-weight: 600;
+    font-size: 12px;
+    font-family: system-ui;
+    font-weight: bold;
+    display: inline-block;
+    border: 3px solid rgba(246, 246, 244, 0.808);
+    border-radius: 3px;
+    padding: 14px;
+    text-align: center;
+    align-items: center;
+}
+  
+nav a {
+    vertical-align: bottom;
+    line-height: 1;
+    font-size: 1rem;
+    color: rgba(246, 246, 244, 0.808);
+}
+  
+nav .button {
+    padding: .1875rem .5rem;
+    /*background-color: #9dc20b;*/
+    line-height: 1.6;
+    color: white;
+}
+  
+  
+header .icon {
+    width: 1rem;
+    padding-left: .75rem;
+}
+
+@media only screen and (max-width: 600px) {
+    header .desktop {
+      display: none;
+    }
+  
+    header .content {
+      padding: .5rem 0;
+    }
+}
+
+
+/*CALCULATOR
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+ background-color: #4a5b6a;
+ padding: 15px;
+ border-radius: 30px;
+ box-shadow: inset 5px 5px 12px #263a47,
+                    5px 5px 12px rgba(0,0,0,.16);
+                    display: grid;
+                    grid-template-columns: repeat(4,68px);
+}
+
+input .calculator{
+ grid-column: span 4;
+  height: 70px;
+  width: 260px;
+  margin-bottom: 30px;
+  background-color: #ecf3f3;
+  box-shadow: inset -5px -5px 12px #ffffff,
+                      5px 5px 12px rgba(0,0,0,.16);
+                      border: none;
+                      border-radius: 30px;
+                      color: rgb(70,70, 70 );
+                      font-size: 50px;
+                      text-align: end;
+                      margin-top: 40px;
+                      padding: 20px;
+}
+
+.calculator button{
+    height: 48px;
+    width: 48px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #263a47,
+                  5px 5px 12px rgba(0,0,0,.16);
+                  border: none;
+                  border-radius: 10px;
+                  margin: 8px;
+                  font-size: 16px;
+}
+
+.equal button{
+    width: 115px;
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #263a47,
+                  5px 5px 12px rgba(0,0,0,.16);
+                  background-color: rgb(199, 52, 12);
+}*/

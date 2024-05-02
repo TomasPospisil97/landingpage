@@ -1,0 +1,470 @@
+body {
+    background-image: url(../images/mountainbackg7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* navbar */
+
+/*
+nav {
+    position: fixed;
+    z-index: 5;
+    left: -17.8em;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 5rem;
+    padding-right: 2rem;
+    background: url("https://content.codecademy.com/courses/freelance-1/unit-6/nav_background.png") center center repeat;
+    font-family: "Proza Libre", serif;
+    font-size: 18px;
+    line-height: 2.2;
+    font-weight: bold;
+    color: #142033;
+    transition: left 50ms linear 250ms;
+  
+  }
+  
+  nav:hover {
+    left: 0;
+  }
+  
+  nav .hover-content {
+    margin-right: 3em;
+  }
+  
+  nav h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.6em;
+    font-weight: bold;
+    color: #639eff;
+  }
+  
+  nav h3 {
+    padding-bottom: 1.1em;
+  }
+  
+  nav ol {
+    list-style: upper-roman outside;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 750ms linear 50ms, left 50ms easy-in 250ms;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    color: #639eff;
+  } */
+  
+
+
+/* Header */
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    border-bottom: solid 1px #c6c1c1;
+    background-color: rgba(61, 88, 109, 0.836);
+    text-shadow:rgb(7, 7, 7);
+    top: 0px;
+    left: 0px;
+}
+
+header .banner {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+  
+header .logo {
+    flex: 1;
+    color: rgba(246, 246, 244, 0.808);
+    font-weight: 600;
+    font-size: 20px;
+    font-family: system-ui;
+    font-weight: bold;
+}
+  
+header nav ul {
+    display: flex;
+}
+  
+nav li {
+    padding-left: 10px;
+    width: 100px;
+    color: rgba(246, 246, 244, 0.808);
+    font-weight: 600;
+    font-size: 12px;
+    font-family: system-ui;
+    font-weight: bold;
+    display: inline-block;
+    border: 3px solid rgba(246, 246, 244, 0.808);
+    border-radius: 3px;
+    padding: 14px;
+    text-align: center;
+    align-items: center;
+}
+  
+nav a {
+    vertical-align: bottom;
+    line-height: 1;
+    font-size: 1rem;
+    color: rgba(246, 246, 244, 0.808);
+}
+  
+nav .button {
+    padding: .1875rem .5rem;
+    line-height: 1.6;
+    color: white;
+}
+  
+  
+header .icon {
+    width: 1rem;
+    padding-left: .75rem;
+}
+
+@media only screen and (max-width: 600px) {
+    header .desktop {
+      display: none;
+    }
+  
+    header .content {
+      padding: .5rem 0;
+    }
+}
+
+/* hlavni section */
+
+/* 
+.banner {
+    width: 100%;
+    text-align: center;
+    padding: 60px 0;
+    font-family: 'Raleway', sans-serif;
+    background-image: url('../images/IMG_1407.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+.about {
+    /*color: rgb(7, 7, 7);*/
+    color: rgba(246, 246, 244, 0.808);
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 50px;
+    position: relative;
+    top: 150px;
+    /*align-items: center;
+    justify-content: center;*/
+}
+
+.about h1 {
+  font-size: 30px;
+  font-family: system-ui;
+  font-weight: bolder;
+}
+
+.about h3 { 
+  font-size: 65px;
+  font-family: system-ui;
+  font-weight: bolder;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.image-container {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+}
+  
+.image-container img {
+    width: 600px;
+    height: 400px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+}
+
+.uvod {
+  display: block;
+}
+
+
+
+#kontakt {
+    text-align: center;
+    color: black;
+    font-size: 75px;
+}
+
+div.proklik {
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+}
+
+
+
+table, th, td {
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    position: relative;
+}
+
+.zbytek {
+    
+    color: black;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+
+.kalendar {
+    color: black;
+    text-align: center;
+    /*align-items: center;*/
+    /*margin: 0 auto;*/
+    /*padding-left: 468px;*/
+    padding-top: 0px;
+    position: relative;
+    top: 100px;
+    /*width: 100%;*/
+    /*justify-content: center;
+    place-items: center;*/
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 500px;
+}
+
+form {
+  padding-bottom: 5px;;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    align-items: center;
+    color: black;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+/*#komentar {
+    padding-top: 0;
+    width: 150px;
+    text-align: center;
+    align-items: center;
+    color: black;
+    font-size: 15px;
+    position: relative;
+}*/
+
+
+
+/*nav {
+    margin: 0;
+    padding: 20px 0;
+  }*/
+  
+/*nav li {
+    color: #070707;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    display: inline-block;
+    width: 200px;
+    border: 3px solid white;
+    border-radius: 3px;
+    padding: 14px;
+  }*/
+  
+  .button {
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*display: block;
+    overflow: hidden;*/
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #c3c5c5;
+    color: black;
+    display: inline-flex;
+    flex-wrap: wrap;
+    position: relative;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+    font-family: system-ui;
+    font-weight: bold;
+  }
+
+  .button:hover {
+    background-color: rgb(246, 246, 244);
+  }
+  
+  .button {
+    transition-property: background-color;
+    transition-duration: 1s;
+  }
+  
+  
+ /* .button span {
+    position: absolute;
+    display: block;
+    height: 100%;
+    text-align: center;
+    width: 72%;
+    left: 0px;
+    line-height: inherit;
+    font-size: 22px;
+  }*/
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+ background-color: #4a5b6a;
+ padding: 15px;
+ border-radius: 30px;
+ box-shadow: inset 5px 5px 12px #263a47,
+                    5px 5px 12px rgba(0,0,0,.16);
+                    display: grid;
+                    grid-template-columns: repeat(4,68px);
+}
+
+input .calculator{
+ grid-column: span 4;
+  height: 70px;
+  width: 260px;
+  margin-bottom: 30px;
+  background-color: #ecf3f3;
+  box-shadow: inset -5px -5px 12px #ffffff,
+                      5px 5px 12px rgba(0,0,0,.16);
+                      border: none;
+                      border-radius: 30px;
+                      color: rgb(70,70, 70 );
+                      font-size: 50px;
+                      text-align: end;
+                      margin-top: 40px;
+                      padding: 20px;
+}
+
+.calculator button{
+    height: 48px;
+    width: 48px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #263a47,
+                  5px 5px 12px rgba(0,0,0,.16);
+                  border: none;
+                  border-radius: 10px;
+                  margin: 8px;
+                  font-size: 16px;
+}
+
+.equal button{
+    width: 115px;
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #263a47,
+                  5px 5px 12px rgba(0,0,0,.16);
+                  background-color: rgb(199, 52, 12);
+}
+
+/*h1 {
+    color: #11212d;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}*/
+
+
+/*FOOTER*/
+
+footer {
+  margin-top: 300px;
+  color: rgba(246, 246, 244, 0.808);
+}
+
+.jazyk {
+width: 5%;
+float: right;
+color: rgba(246, 246, 244, 0.808);
+font-weight: 600;
+font-size: 20px;
+font-family: system-ui;
+font-weight: bold;
+}
+
+/*.jazyk .button {
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  background-color: #c3c5c5;
+  color: white;
+  display: inline-flex;
+  flex-wrap: wrap;
+  position: relative;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+  font-family: system-ui;
+  font-weight: bold;
+}
+
+.jazyk .button:hover {
+  background-color: rgb(246, 246, 244);
+}
+
+.jazyk .button {
+  transition-property: background-color;
+  transition-duration: 1s;
+}*/
+  

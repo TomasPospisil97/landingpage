@@ -1,0 +1,121 @@
+body {
+    background-image: url(../images/mountainbackg7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/* Header */
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    border-bottom: solid 1px #c6c1c1;
+    background-color: rgba(61, 88, 109, 0.836);
+    text-shadow:rgb(7, 7, 7);
+    top: 0px;
+    left: 0px;
+}
+
+header .banner {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+  
+header .logo {
+    flex: 1;
+    color: rgba(246, 246, 244, 0.808);
+    font-weight: 600;
+    font-size: 20px;
+    font-family: system-ui;
+    font-weight: bold;
+}
+  
+header nav ul {
+    display: flex;
+}
+  
+nav li {
+    padding-left: 10px;
+    width: 100px;
+    color: rgba(246, 246, 244, 0.808);
+    font-weight: 600;
+    font-size: 12px;
+    font-family: system-ui;
+    font-weight: bold;
+    display: inline-block;
+    border: 3px solid rgba(246, 246, 244, 0.808);
+    border-radius: 3px;
+    padding: 14px;
+    text-align: center;
+    align-items: center;
+}
+  
+nav a {
+    vertical-align: bottom;
+    line-height: 1;
+    font-size: 1rem;
+    color: rgba(246, 246, 244, 0.808);
+}
+  
+nav .button {
+    padding: .1875rem .5rem;
+    line-height: 1.6;
+    color: white;
+}
+  
+  
+header .icon {
+    width: 1rem;
+    padding-left: .75rem;
+}
+
+@media only screen and (max-width: 600px) {
+    header .desktop {
+      display: none;
+    }
+  
+    header .content {
+      padding: .5rem 0;
+    }
+}
+
+
+/*MAIN*/
+
+.about {
+    color: rgba(246, 246, 244, 0.808);
+    margin-top: 10px;
+    text-align: center;
+    height: 150px;
+    /*padding-bottom: 50px;*/
+    position: relative;
+    top: 150px;
+    font-size: 50px;
+    font-family: system-ui;
+}
+
+.social {
+    text-align: center;
+    align-items: center;
+    /*height: 150px;*/
+    /*padding-bottom: 50px;*/
+    position: relative;
+    top: 150px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    }
+
+
+main button {
+    text-align: center;
+    position: relative;
+    width: 76px;
+    height: 56px;
+}
+
+
