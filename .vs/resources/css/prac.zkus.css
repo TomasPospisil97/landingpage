@@ -85,7 +85,7 @@ header .icon {
 }
 
 
-/*CALCULATOR
+/*CALCULATOR*/
 
 .container{
     height: 100vh;
@@ -140,4 +140,4 @@ input .calculator{
     box-shadow: -5px -5px 12px #263a47,
                   5px 5px 12px rgba(0,0,0,.16);
                   background-color: rgb(199, 52, 12);
-}*/
+}
