@@ -7,6 +7,8 @@ body {
 }
 
 
+
+
 /* Header */
 header {
     position: fixed;
@@ -141,3 +143,4 @@ input .calculator{
                   5px 5px 12px rgba(0,0,0,.16);
                   background-color: rgb(199, 52, 12);
 }
+
