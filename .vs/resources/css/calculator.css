@@ -10,10 +10,8 @@ body {
 }
 
 main {
-    padding-top: 125px;
+    padding-top: 50px;
 }
-
-
 
 
 /* Header */
@@ -56,7 +54,7 @@ nav li {
     font-family: system-ui;
     font-weight: bold;
     display: inline-block;
-    border: 3px solid rgba(246, 246, 244, 0.808);
+    border: 3px solid  rgba(246, 246, 244, 0.808);
     border-radius: 3px;
     padding: 14px;
     text-align: center;
@@ -93,8 +91,7 @@ header .icon {
     }
 }
 
-
-/*CALCULATOR
+/*CALCULATOR*/
 
 .container{
     height: 100vh;
@@ -149,130 +146,4 @@ input .calculator{
     box-shadow: -5px -5px 12px #263a47,
                   5px 5px 12px rgba(0,0,0,.16);
                   background-color: rgb(199, 52, 12);
-}
-*/
-
-/*MENU*/
-
-main a {
-    color: white;
-    width: 20rem;
-}
-
-main:after {
-content: ' ';
-position: absolute;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-z-index: -1;
-filter: blur(20px);
--webkit-filter: blur(20px);
-transform: scaleX(-1);
-}
-    
-.flex-card-wrapper {
-    width: 350px;
-    max-width: 100rem;
-    height: 400px;
-    max-height: 50rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-    
-.flex-card-wrapper .flex-card-container {
-    height: 100%;
-    width: 14%;
-    transition: 450ms all ease-in-out;
-    border-radius: 10px;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0 5px 0 5px;
-}
-    
-.flex-card-wrapper .flex-card-container.active {
-    width: 100%;
-}
-    
-.flex-card-wrapper .flex-card-container.active .overlay h3, .flex-card-wrapper .flex-card-container.active .overlay p {
-    opacity: 1;
-    transform: translateX(0);
-}
-    
-.flex-card-wrapper .flex-card-container.poke-1 {
-    background-image: url(../images/flappyback.png);
-}
-    
-.flex-card-wrapper .flex-card-container.poke-2 {
-        background-image: url(../images/calculatorbackroung.png);
-}
-    
-.flex-card-wrapper .flex-card-container:last-child {
-    margin: 0 0 0 0;
-}
-    
-.flex-card-wrapper .flex-card-container .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    height: 8rem;
-    padding: 0 0 32px 12px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    width: 100%;
-    transition: 450ms all ease-in-out;
-    background: linear-gradient(180deg rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
-}
-    
-.flex-card-wrapper .flex-card-container .overlay .icon {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 100%;
-    background-color: black;
-    transition: 450ms all ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-    
-.flex-card-wrapper .flex-card-container .overlay .h3 {
-    top: 0;
-    padding-bottom: 10px;
-    font-size: 50px;
-    margin: 0;
-    transition: 350ms 200ms all ease-in-out;
-}
-    
-.flex-card-wrapper .flex-card-container .overlay .p {
-    top: 20px;
-    font-size: 25px;
-    margin: 0;
-    transition: 350ms 300ms all ease-in-out;
-}
-    
-.flex-card-wrapper .flex-card-container .overlay h3 {
-    color: white;
-    position: absolute;
-    width: 20rem;
-    opacity: 0;
-    transform: translateX(-15px);
-    padding-bottom: 10px;
-    /*background-color: black;*/
-}
-    
-.flex-card-wrapper .flex-card-container .overlay p {
-    color: white;
-    position: absolute;
-    width: 20rem;
-    opacity: 0;
-    transform: translateX(-15px);
 }

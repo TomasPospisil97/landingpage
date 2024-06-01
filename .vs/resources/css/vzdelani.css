@@ -91,6 +91,7 @@ header .icon {
     }
 }
 
+/*MENU
 main:after {
 content: ' ';
 position: absolute;
@@ -207,3 +208,5 @@ width: 20rem;
 opacity: 0;
 transform: translateX(-15px);
 }
+
+*/
