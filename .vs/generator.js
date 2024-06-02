@@ -1,0 +1,62 @@
+let button = document.getElementById('button');
+let output = document.getElementById('output');
+let facts = 
+    [
+        /*'"The greatest glory in living lies not in never falling, but in rising every time we fall." -Nelson Mandela',
+        '"The way to get started is to quit talking and begin doing." -Walt Disney',
+        '"Your time is limited, so dont waste it living someone elses life. Dont be trapped by dogma, which is living with the results of other peoples thinking." -Steve Jobs',
+        '"The future belongs to those who believe in the beauty of their dreams." -Eleanor Roosevelt',
+        '"If you look at what you have in life, youll always have more. If you look at what you dont have in life, youll never have enough." -Oprah Winfrey',
+        '"If you set your goals ridiculously high and its a failure, you will fail above everyone elses success." -James Cameron',
+        '"You may say Im a dreamer, but Im not the only one. I hope someday you will join us. And the world will live as one." -John Lennon',
+        '"The only thing we have to fear is fear itself." -Franklin D. Roosevelt',
+        '"Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that." -Martin Luther King Jr.',
+        '"Do one thing every day that scares you." -Eleanor Roosevelt',
+        '"Well done is better than well said." -Benjamin Franklin',
+        '"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart." -Helen Keller',
+        '"It is during our darkest moments that we must focus to see the light." -Aristotle',
+        '"Do not go where the path may lead, go instead where there is no path and leave a trail." -Ralph Waldo Emerson',
+        '"Be yourself; everyone else is already taken." -Oscar Wilde',
+        '"In the end, its not the years in your life that count. Its the life in your years." -Abraham Lincoln',
+        '"Never let the fear of striking out keep you from playing the game." -Babe Ruth',
+        '"In this life we cannot do great things. We can only do small things with great love." -Mother Teresa',
+        '"Many of lifes failures are people who did not realize how close they were to success when they gave up." -Thomas A. Edison',
+        '"You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose." -Dr. Seuss',
+        '"I think that was enough of quotes for today." -The one who devoloped this',*/
+        'A cloud weighs around a million tonnes. A cloud typically has a volume of around 1km3 and a density of around 1.003kg per m3',
+        'Giraffes are 30 times more likely to get hit by lightning than people. True, there are only five well-documented fatal lightning strikes on giraffes between 1996 and 2010.',
+        'Identical twins dont have the same fingerprints. You can not blame your crimes on your twin, after all.',
+        'Earths rotation is changing speed. It is actually slowing. This means that, on average, the length of a day increases by around 1.8 seconds per century.',
+        'Your brain is constantly eating itself. This process is called phagocytosis, where cells envelop and consume smaller cells or molecules to remove them from the system.',
+        'The largest piece of fossilised dinosaur poo discovered is over 30cm long and over two litres in volume. Believed to be a Tyrannosaurus rex turd.',
+        'The Universes average colour is called "Cosmic latte". Astronomers found that the light coming from galaxies averaged into a beige colour that is close to white.',
+        'Animals can experience time differently from humans. To smaller animals, the world around them moves more slowly compared to humans. Salamanders and lizards, for example, experience time more slowly than cats and dogs.',
+        'Water might not be wet. This is because most scientists define wetness as a liquids ability to maintain contact with a solid surface, meaning that water itself is not wet, but can make other objects wet.',
+        'The average human body contains enough carbon to make 900 pencils, or enough potassium to fire a machine gun to empty over 20 rounds of ammunition.',
+        'A chicken once lived for 18 months without a head. Mike the chickens incredible feat was recorded back in the 1940s in the USA.',
+        'All the worlds bacteria stacked on top of each other would stretch for 10 billion light-years. Together, Earths 0.001mm-long microbes could wrap around the Milky Way over 20,000 times.',
+        'Wearing a tie can reduce blood flow to the brain by 7.5 per cent. A study in 2018 found that wearing a necktie can reduce the blood flow to your brain by up to 7.5 per cent, which can make you feel dizzy, nauseous, and cause headaches.',
+        'The fear of long words is called Hippopotomonstrosesquippedaliophobia. The 36-letter word was first used by the Roman poet Horace.',
+        'The worlds oldest dog lived to 29.5 years old. Australian cattle dog, "Bluey", survived to the ripe old age of 29.5.',
+        'The worlds oldest cat lived to 38 years and three days old. Creme Puff was the oldest cat to ever live.',
+        'The Sun makes a sound but we can not hear it. In the form of pressure waves, the Sun does make a sound.',
+        'Mount Everest is not the tallest mountain on Earth. Mauna Kea and Mauna Loa in Hawaii, the twin volcanoes, are taller than Mount Everest due to 4.2km of their heights being submerged underwater.',
+        'Our solar system has a wall. The heliopause is the region of space in which solar wind is not hot enough to push back the wind of particles coming from distant stars and is often considered the “boundary wall”.',
+        'Octopuses dont actually have tentacles. They have eight limbs, but they are arms (for most species).',
+        'Comets smell like rotten eggs. A comet smells like rotten eggs, urine, burning matches, and… almonds.',
+        'You can actually die laughing. And a number of people have, typically due to intense laughter causing a heart attack or suffocation. Comedy shows should come with a warning.',
+        'Ants do not have lungs. They instead breathe through spiracles, nine or ten tiny openings, depending on the species.',
+        'Wind turbines kill between 10,000 and 100,000 birds each year in the UK.',
+        'Snails have teeth. Between 1,000 and 12,000 teeth, to be precise. You will find the snails tiny "teeth" all over its file-like tongue.',
+        'One in 18 people have a third nipple. Known as polythelia, the third nipple is caused by a mutation in inactive genes.',
+        'Deaf people are known to use sign language in their sleep.',
+        'Finland is the happiest country on Earth. According to the World Happiness Report, it has been for six years in a row.',
+        'Most ginger cats are male.',
+        'Animals can be allergic to humans. Animals can be allergic to our dead skin cells => dander.',
+        'LEGO bricks withstand compression better than concrete. An ordinary plastic LEGO brick is able to support the weight of 375,000 other bricks before it fails.',
+    ];
+
+button.addEventListener('click', function(){
+    var randomFact = facts[Math.floor(Math.random() * facts.length)]
+    output.innerHTML = randomFact;
+});

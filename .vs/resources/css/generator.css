@@ -4,8 +4,14 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+main {
+    padding-top: 125px;
+}
 
 /* Header */
 header {
@@ -63,6 +69,7 @@ nav a {
   
 nav .button {
     padding: .1875rem .5rem;
+    /*background-color: #9dc20b;*/
     line-height: 1.6;
     color: white;
 }
@@ -83,39 +90,44 @@ header .icon {
     }
 }
 
-
 /*MAIN*/
 
-.about {
-    color: rgba(246, 246, 244, 0.808);
-    margin-top: 10px;
-    text-align: center;
-    height: 150px;
-    /*padding-bottom: 50px;*/
-    position: relative;
-    top: 100px;
-    font-size: 50px;
-    font-family: system-ui;
-}
-
-.social {
+#container {
+    /*background-color: antiquewhite;*/
+    /*border: 5px solid rgb(173, 176, 147);*/
+    border: 5px solid rgba(246, 246, 244, 0.808);
+    height: 250px;
+    width: 700px;
+    margin: 0 auto;
+    justify-content: center;
     text-align: center;
     align-items: center;
-    /*height: 150px;*/
-    /*padding-bottom: 50px;*/
-    position: relative;
-    top: 150px;
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    }
-
-
-main button {
-    text-align: center;
-    position: relative;
-    width: 76px;
-    height: 56px;
 }
 
+/*BUTTON*/
+#button {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    height: 55px;
+    width: 260px;
+    font-size: 16px;
+    background-color: #e0e1e1;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
 
+#button:hover {
+    background-color: rgb(246, 246, 244);
+}
+  
+#button {
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+/*OUTPUT*/
+#output {
+    margin: 25px auto;
+    color: white;
+    font-size: 16px;
+}
