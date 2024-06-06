@@ -216,6 +216,10 @@ transform: scaleX(-1);
 .flex-card-wrapper .flex-card-container.poke-3 {
     background-image: url(../images/generator2.png);
 }
+
+.flex-card-wrapper .flex-card-container.poke-4 {
+    background-image: url(../images/passwordGen.png);
+}
     
 .flex-card-wrapper .flex-card-container:last-child {
     margin: 0 0 0 0;

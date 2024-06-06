@@ -108,6 +108,7 @@ header .icon {
     display: flex;
     width: 100%;
     justify-content: space-around;
+    /*background: white;*/
     }
 
 
@@ -116,6 +117,11 @@ main button {
     position: relative;
     width: 76px;
     height: 56px;
+}
+
+.button {
+    background: rgba(246, 246, 244, 0.808);
+    border-radius: 15px;
 }
 
 
