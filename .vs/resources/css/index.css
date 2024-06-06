@@ -190,10 +190,15 @@ header .icon {
 }
   
 .image-container img {
-    width: 600px;
-    height: 400px;
-    padding-bottom: 12px;
-    padding-left: 40px;
+    width: 500px;
+    height: 300px;
+    /*padding-bottom: 12px;*/
+    /*padding-left: 40px;*/
+    /*background: rgba(61, 88, 109, 0.836);*/
+    /*background: rgba(246, 246, 244, 0.808);*/
+    border: 5px solid rgba(246, 246, 244, 0.808);
+    border-radius: 160px;
+
 }
 
 .uvod {
