@@ -169,27 +169,35 @@ header .icon {
     /*color: rgb(7, 7, 7);*/
     color: rgba(246, 246, 244, 0.808);
     margin-top: 10px;
-    text-align: center;
+    text-align: left;
     padding-bottom: 50px;
     position: relative;
-    top: 150px;
+    top: 130px;
+    padding-left: 50px;
+    padding-right: 50px;
     /*align-items: center;
     justify-content: center;*/
     /*border-bottom: solid 1px #c6c1c1;*/
 }
 
 .about h1 {
-  font-size: 30px;
+  font-size: 40px;
   font-family: system-ui;
   font-weight: bolder;
 }
 
 .about h3 { 
-  font-size: 65px;
+  font-size: 30px;
   font-family: system-ui;
   font-weight: bolder;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 0;
+  
+}
+
+.about p {
+  font-size: 14px;
+  font-family: system-ui;
+  font-weight: bolder;
 }
 
 .image-container {
@@ -199,8 +207,8 @@ header .icon {
 }
   
 .image-container img {
-    width: 500px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
     /*padding-bottom: 12px;*/
     /*padding-left: 40px;*/
     /*background: rgba(61, 88, 109, 0.836);*/
@@ -212,6 +220,7 @@ header .icon {
 
 .uvod {
   display: block;
+  padding-right: 40px;
 }
 
 
@@ -282,7 +291,6 @@ h2 {
     align-items: center;
     color: black;
     font-size: 15px;
-    padding-top: 20px;
     padding-bottom: 0px;
     margin-bottom: 0px;
 }
@@ -327,8 +335,8 @@ h2 {
     font-size: 30px;
     font-family: system-ui;
     font-weight: bolder;
-    padding-top: 80px;
-    margin-top: 70px;
+    padding-top: 70px;
+    margin-top: 80px;
   }
 
   .informacezkus {
@@ -357,15 +365,15 @@ h2 {
     margin-top: 50px;
   }*/
 
-  .tlacitko {
+  /*.tlacitko {
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
+  }*/
 
   .button {
     position: absolute;
-    top: 100px;
+    /*top: 100px;*/
     bottom: 0;
     left: 0;
     right: 0;
