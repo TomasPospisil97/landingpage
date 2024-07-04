@@ -3,62 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="./resources/css/vzdelani.css">
     <title>Tomáš Pospíšil</title>
 </head>
 <body>
 
     <header>
-        <div class="banner">
-           <a href="index.html" class="desktop logo">Ing. Tomáš Pospíšil</a>
-            <nav class="desktop">
-                <ul>
-                <li><a href="./ome.html">About</a></li>
-                <!--<li><a class="fancy button" style="color: black;" href="#" role="button"><span>O mě</span></a></li>--> 
-                <li><a href="./prac.zkus.html">Experience</a></li> 
-                <li><a href="./vzdelani.html">Education</a></li> 
-                <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h2 class="logo"><span>Tom</span>áš.</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="mailto:tp.tomaspospisil@gmail.com" role="button" class="btn-connect">Let's Connect</a>
     </header>
 
     <main>
-        <!--<div class="about"> 
-            <h1>GET IN TOUCH</h1>
+
+    <section class="home">
+        <div class="content">
+            <h2>Hello, I'm <span>Tomáš Pospíšil</span></h2>
+            <h4>Junior Software Enginner and Logistics Expert</h4>
+            <p>text text text text text text text text text text text</p>
+            <div class="btn-group">
+                <a href="#portfolio">See My Portfolio</a>
+                <a href="#contact">Hire Me</a>
+            </div>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-posp%C3%AD%C5%A1il-3816602b5/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/TomasPospisil97"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
         </div>
+        <img src="./resources/images/profilOrez3.png" alt="">
+    </section>
 
-        <div class="social">
-            <button type="submit">
-                <i class="fa-solid fa-envelope fa-5x"></i>
-            </button>
-            <button>
-                <i class="fa-brands fa-instagram fa-5x"></i>
-            </button>
-            <button>
-                <i class="fa-brands fa-linkedin fa-5x"></i>
-            </button>
-            <button>
-                <i class="fa-brands fa-github fa-5x"></i>
-            </button>
-        </div>-->
-        
-        <!--<section class="flex-card-wrapper">
-            <article class="flex-card-container poke-1">
-                <div class="overlay">
-                    <h3>01</h1>
-                    <p>Flappy</p>
-                </div>
-            </article>
+    
+    <section class="about" id="about">
+        <h2><span>Ab</span>out</h2>
+        <div class="about-info">
+            <p>I am a Junior Software Engineer and Logistics Expert with a passion for technology and problem-solving
+            skills. I have experience in various programming languages and technologies, including C#, Java, and
+            JavaScript. I am also proficient in logistics and supply chain management, with a strong understanding
+            of inventory management, transportation, and warehousing. I am a team player and a quick learner
+            who is always eager to take on new challenges and learn new skills. I am looking for a
+            challenging and rewarding career in the software engineering field.</p>
+        </div>
+    </section>
 
-            <article class="flex-card-container poke-2">
-                <div class="overlay">
-                    <h3>02</h1>
-                    <p>Calculator</p>
+    <section class="portfolio" id="portfolio">
+        <h2><span>Port</span>folio</h2>
+        <div class="portfolio-items"><!--inline-flex-->
+            <div class="portfolio-left"><!--flex-->
+                <div class="flappy">
+                    <img src="./resources/images/flappyback.png" alt="">
+                    <h4>Flappy Bird</h4>
                 </div>
-            </article>
-        </section>
-    -->
+                <div class="calculator">
+                    <img src="./resources/images/calculatorbackroung.png" alt="">
+                    <h4>Calculator</h4>
+                </div>
+                <div class="random-facts">
+                    <img src="./resources/images/generator2.png" alt="">
+                    <h4>Random Facts</h4>
+                </div>
+            </div>
+            <div class="portfolio-right"><!--flex-->
+                <div class="password">
+                    <img src="./resources/images/passwordGen.png" alt="">
+                    <h4>Password Generator</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2><span>Con</span>tact</h2>
+        <div class="contact-info"><!--flex-->
+            <div class="contact-left"><!--block-->
+                <div class="contact-text"><!--block-->
+                    <h4>Feel free to contact me via options below or use contact form on the right</h4>
+                    <h4>Email:</h4>
+                    <p>email@email.com</p>
+                    <h4>Phone:</h4>
+                    <p>123-456-7890</p>
+                </div>
+                <div class="contact-socials"><!--flex-->
+                    <a href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-posp%C3%AD%C5%A1il-3816602b5/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/TomasPospisil97"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+
+            </div>
+        </div>
+    </section>
+    
+
+
     </main>
 
 

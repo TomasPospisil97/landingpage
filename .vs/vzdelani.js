@@ -1,4 +1,4 @@
-alert ('Here you can find my education');
+//alert ('Here you can find my education');
 
 const ACTIVECLASS = 'active';
 const IMAGES = document.querySelectorAll('.flex-card-container');

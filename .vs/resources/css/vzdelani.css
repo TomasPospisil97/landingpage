@@ -1,84 +1,72 @@
-body {
-    background-image: url(../images/mountainbackg7.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/*GENERAL*/
+
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-main {
-    padding-top: 125px;
-}
 
+/*HEADER*/
 
-/* Header */
 header {
     position: fixed;
-    z-index: 100;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-bottom: solid 1px #c6c1c1;
-    background-color: rgba(61, 88, 109, 0.836);
-    text-shadow:rgb(7, 7, 7);
-    top: 0px;
-    left: 0px;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
-header .banner {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-  
-header .logo {
-    flex: 1;
+.logo {
+    font-size: 2em;
     color: rgba(246, 246, 244, 0.808);
-    font-weight: 600;
-    font-size: 20px;
-    font-family: system-ui;
-    font-weight: bold;
+    cursor: default;
 }
-  
-header nav ul {
-    display: flex;
+
+.logo span {
+    color: rgba(74, 161, 228, 0.836);
 }
-  
-nav li {
-    padding-left: 10px;
-    width: 100px;
+
+.navigation {
+    margin-left: 20px;
+}
+
+.navigation a {
+    font-size: 1.1em;
     color: rgba(246, 246, 244, 0.808);
-    font-weight: 600;
-    font-size: 12px;
-    font-family: system-ui;
-    font-weight: bold;
-    display: inline-block;
-    border: 3px solid  rgba(246, 246, 244, 0.808);
-    border-radius: 3px;
-    padding: 14px;
-    text-align: center;
-    align-items: center;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: .3s;
 }
-  
-nav a {
-    vertical-align: bottom;
-    line-height: 1;
-    font-size: 1rem;
-    color: rgba(246, 246, 244, 0.808);
+
+.navigation a:hover {
+    color: #fff;
 }
-  
-nav .button {
-    padding: .1875rem .5rem;
-    /*background-color: #9dc20b;*/
-    line-height: 1.6;
-    color: white;
+
+.btn-connect {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 35px;
+    background: rgba(74, 161, 228, 0.836);
+    border-radius: 10px;
+    border: 2px solid rgba(74, 161, 228, 0.836);
+    font-weight: 500;
+    transition: .3s;
 }
-  
-  
-header .icon {
-    width: 1rem;
-    padding-left: .75rem;
+
+.btn-connect:hover {
+    color: rgba(74, 161, 228, 0.836);
+    background: transparent;
 }
 
 @media only screen and (max-width: 600px) {
@@ -91,122 +79,316 @@ header .icon {
     }
 }
 
-/*MENU
-main:after {
-content: ' ';
-position: absolute;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-z-index: -1;
-filter: blur(20px);
--webkit-filter: blur(20px);
-transform: scaleX(-1);
+
+/*Home section*/
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 3px 100px;
 }
 
-.flex-card-wrapper {
-width: 350px;
-max-width: 100rem;
-height: 400px;
-max-height: 50rem;
-display: flex;
-justify-content: center;
-align-items: center;
+.home img {
+    width: 340px;
+    height: 340px;
+    margin-left: 200px;
+    border: 5px solid rgba(74, 161, 228, 0.836);
+    border-radius: 170px;
 }
 
-.flex-card-wrapper .flex-card-container {
-height: 100%;
-width: 14%;
-transition: 450ms all ease-in-out;
-border-radius: 10px;
-cursor: pointer;
-overflow: hidden;
-position: relative;
-background-position: center center;
-background-size: cover;
-background-repeat: no-repeat;
-margin: 0 5px 0 5px;
+.content {
+    max-width: 500px;
+    color: #fff;
 }
 
-.flex-card-wrapper .flex-card-container.active {
-width: 100%;
+.content h2 {
+    font-size: 2.5em;
 }
 
-.flex-card-wrapper .flex-card-container.active .overlay h3, .flex-card-wrapper .flex-card-container.active .overlay p {
-opacity: 1;
-transform: translateX(0);
+.content h2 span {
+    color: rgba(74, 161, 228, 0.836);
 }
 
-.flex-card-wrapper .flex-card-container.poke-1 {
-background-image: url(../images/flappyback.png);
+.content h4 {
+    font-size: 1.25em;
 }
 
-.flex-card-wrapper .flex-card-container.poke-2 {
-    background-image: url(../images/calculatorbackroung.png);
+.content p {
+    padding: 10px 0 40px 0;
 }
 
-.flex-card-wrapper .flex-card-container:last-child {
-margin: 0 0 0 0;
+.btn-group a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 40px;
+    background: rgba(74, 161, 228, 0.836);
+    border-radius: 10px;
+    border: 2px solid rgba(74, 161, 228, 0.836);
+    font-weight: 500;
+    transition: .3s;
 }
 
-.flex-card-wrapper .flex-card-container .overlay {
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-z-index: 2;
-height: 8rem;
-padding: 0 0 32px 12px;
-display: flex;
-justify-content: flex-start;
-align-items: flex-end;
-width: 100%;
-transition: 450ms all ease-in-out;
-background: linear-gradient(180deg rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+.btn-group a:hover {
+    color: rgba(74, 161, 228, 0.836);
+    background: transparent;
 }
 
-.flex-card-wrapper .flex-card-container .overlay .icon {
-width: 3rem;
-height: 3rem;
-border-radius: 100%;
-background-color: black;
-transition: 450ms all ease-in-out;
-display: flex;
-align-items: center;
-justify-content: center;
+.socials {
+    position: absolute;
+    bottom: 50px;
 }
 
-.flex-card-wrapper .flex-card-container .overlay .h3 {
-top: 0;
-padding-bottom: 10px;
-font-size: 50px;
-margin: 0;
-transition: 350ms 200ms all ease-in-out;
+.socials a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(74, 161, 228, 0.836);
+    margin-right: 22px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #fff;
+    outline: 2px solid rgba(74, 161, 228, 0.836);
+    transition: .3s;
 }
 
-.flex-card-wrapper .flex-card-container .overlay .p {
-top: 20px;
-font-size: 25px;
-margin: 0;
-transition: 350ms 300ms all ease-in-out;
+.socials a:hover {
+    transform: translateY(-5px);
 }
 
-.flex-card-wrapper .flex-card-container .overlay h3 {
-color: white;
-position: absolute;
-width: 20rem;
-opacity: 0;
-transform: translateX(-15px);
-padding-bottom: 10px;
+.socials a i {
+    color: #fff;
 }
 
-.flex-card-wrapper .flex-card-container .overlay p {
-color: black;
-position: absolute;
-width: 20rem;
-opacity: 0;
-transform: translateX(-15px);
+/*ABOUT*/
+
+.about {
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(246, 246, 244, 0.808);
+    font-size: 30px;
+    font-weight: 500;
+    padding-top: 70px;
+    margin-top: 80px;
+    /*display: inline-block;*/
 }
+
+.about p {
+    font-size: 18px;
+    text-align: left;
+    color: #fff;
+}
+
+.about h2 span {
+    color: rgba(74, 161, 228, 0.836);
+}
+
+.about-info {
+    margin-top: 50px;
+    margin-right: 40px;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+}
+
+.portfolio {
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(246, 246, 244, 0.808);
+    font-size: 30px;
+    font-weight: 500;
+    padding-top: 70px;
+    margin-top: 80px;
+}
+
+.portfolio h2 span {
+    color: rgba(74, 161, 228, 0.836);
+}
+
+.contact {
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(246, 246, 244, 0.808);
+    font-size: 30px;
+    font-weight: 500;
+    padding-top: 60px;
+    margin-top: 70px;
+}
+
+.contact h2 span {
+    color: rgba(74, 161, 228, 0.836);
+}
+
+
+/*BACKGROUND*/
+
+
+body {
+    background-image: url(../images/mountainbackg7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*PORTFOLIO*/
+
+.portfolio-items {
+    display: inline-flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.portfolio-items .portfolio-left .flappy, .portfolio-items .portfolio-left .calculator, .portfolio-items .portfolio-left .random-facts {
+    display: block;
+}
+
+.portfolio-left {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flappy, .calculator, .random-facts, .password {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.portfolio-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio-items .portfolio-right .password {
+    display: block;
+}
+
+/*IMAGES in PORTFOLIO*/
+
+.flappy img {
+    width: 140px;
+    height: 200px;
+    border: 2px solid rgba(74, 161, 228, 0.836);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.flappy img:hover, .calculator img:hover, .random-facts img:hover, .password img:hover {
+    transform: translateY(-5px);
+}
+
+.calculator img {
+    width: 140px;
+    height: 200px;
+    border: 2px solid rgba(74, 161, 228, 0.836);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.random-facts img {
+    width: 140px;
+    height: 200px;
+    border: 2px solid rgba(74, 161, 228, 0.836);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.password img {
+    width: 140px;
+    height: 200px;
+    border: 2px solid rgba(74, 161, 228, 0.836);
+    transition: .3s;
+    cursor: pointer;
+}
+
+/*H4 PORTFLIO*/
+
+.portfolio h4 {
+    font-size: 12px;
+    color: #fff;
+}
+
+
+
+
+/*CONTACT*/
+
+.contact h4 {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.contact p {
+    font-size: 14px;
+}
+
+.contact-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.contact-left {
+    display: block;
+    margin-top: 30px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.contact-text {
+    display: block;
+}
+
+.contact-socials {
+    margin-top: 30px;
+}
+
+.contact-info .contact-left .contact-socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(74, 161, 228, 0.836);
+    margin-right: 22px;
+    text-align: center;
+    align-items: center;
+    line-height: 40px;
+    border: 1px solid #fff;
+    outline: 2px solid rgba(74, 161, 228, 0.836);
+    transition: .3s;
+}
+
+.contact-info .contact-left .contact-socials a:hover {
+    transform: translateY(-5px);
+}
+
+.contact-socials a i {
+    color: #fff;
+    align-items: center;
+}
+
+.contact-right {
+    width: 600px;
+    height: 300px;
+    border: 1px solid rgba(74, 161, 228, 0.836);
+    margin-right: 30px;
+}
+
+/*USEFULL TIPS
+
+border-radius: 64px 48px 16px 96px; // interesting border look
 
 */
