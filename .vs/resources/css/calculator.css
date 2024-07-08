@@ -1,3 +1,16 @@
+/*GENERAL*/
+
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 body {
     background-image: url(../images/mountainbackg7.jpg);
     background-repeat: no-repeat;
@@ -17,68 +30,57 @@ main {
 /* Header */
 header {
     position: fixed;
-    z-index: 100;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-bottom: solid 1px #c6c1c1;
-    background-color: rgba(61, 88, 109, 0.836);
-    text-shadow:rgb(7, 7, 7);
-    top: 0px;
-    left: 0px;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
-header .banner {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-  
-header .logo {
-    flex: 1;
+.logo {
+    font-size: 2em;
     color: rgba(246, 246, 244, 0.808);
-    font-weight: 600;
-    font-size: 20px;
-    font-family: system-ui;
-    font-weight: bold;
+    cursor: default;
 }
-  
-header nav ul {
-    display: flex;
+
+.logo span {
+    color: rgba(74, 161, 228, 0.836);
 }
-  
-nav li {
-    padding-left: 10px;
-    width: 100px;
+
+.navigation {
+    margin-left: 20px;
+}
+
+.navigation a {
+    font-size: 1.1em;
     color: rgba(246, 246, 244, 0.808);
-    font-weight: 600;
-    font-size: 12px;
-    font-family: system-ui;
-    font-weight: bold;
-    display: inline-block;
-    border: 3px solid  rgba(246, 246, 244, 0.808);
-    border-radius: 3px;
-    padding: 14px;
-    text-align: center;
-    align-items: center;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: .3s;
 }
-  
-nav a {
-    vertical-align: bottom;
-    line-height: 1;
-    font-size: 1rem;
-    color: rgba(246, 246, 244, 0.808);
+
+.navigation a:hover {
+    color: #fff;
 }
-  
-nav .button {
-    padding: .1875rem .5rem;
-    /*background-color: #9dc20b;*/
-    line-height: 1.6;
-    color: white;
+
+.btn-connect {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 35px;
+    background: rgba(74, 161, 228, 0.836);
+    border-radius: 10px;
+    border: 2px solid rgba(74, 161, 228, 0.836);
+    font-weight: 500;
+    transition: .3s;
 }
-  
-  
-header .icon {
-    width: 1rem;
-    padding-left: .75rem;
+
+.btn-connect:hover {
+    color: rgba(74, 161, 228, 0.836);
+    background: transparent;
 }
 
 @media only screen and (max-width: 600px) {
@@ -90,6 +92,7 @@ header .icon {
       padding: .5rem 0;
     }
 }
+
 
 /*CALCULATOR*/
 
@@ -103,11 +106,14 @@ header .icon {
 .calculator{
  background-color: #4a5b6a;
  padding: 15px;
- border-radius: 30px;
- box-shadow: inset 5px 5px 12px #263a47,
-                    5px 5px 12px rgba(0,0,0,.16);
-                    display: grid;
-                    grid-template-columns: repeat(4,68px);
+display: grid;
+grid-template-columns: repeat(4,68px);
+border: 1px solid rgba(255, 255, 255, 0.18);
+background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+-webkit-backdrop-filter: blur(20px);
+backdrop-filter: blur(20px);
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+border-radius: 32px;
 }
 
 input .calculator{

@@ -383,7 +383,12 @@ body {
 .contact-right {
     width: 600px;
     height: 300px;
-    border: 1px solid rgba(74, 161, 228, 0.836);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 32px;
     margin-right: 30px;
 }
 
