@@ -1,0 +1,343 @@
+body {
+    background-image: url(../images/mountainbackg7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    padding-top: 100px;
+}
+
+
+/* Header */
+/*GENERAL*/
+
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --primary-color: rgba(74, 161, 228, 0.836);;
+}
+
+
+
+
+
+
+
+/*HEADER*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2em;
+    color: rgba(246, 246, 244, 0.808);
+    cursor: default;
+}
+
+.logo span {
+    color: rgba(74, 161, 228, 0.836);
+}
+
+.navigation {
+    margin-left: 20px;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    color: rgba(246, 246, 244, 0.808);
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navigation a:hover {
+    color: #fff;
+}
+
+.btn-connect {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 35px;
+    background: rgba(74, 161, 228, 0.836);
+    border-radius: 10px;
+    border: 2px solid rgba(74, 161, 228, 0.836);
+    font-weight: 500;
+    transition: .3s;
+}
+
+.btn-connect:hover {
+    color: rgba(74, 161, 228, 0.836);
+    background: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+    header .desktop {
+      display: none;
+    }
+  
+    header .content {
+      padding: .5rem 0;
+    }
+}
+
+
+
+
+
+
+
+/*MAIN*/
+
+.container {
+    position: relative;
+    width: 1200px;
+    min-height: 800px;
+    margin: 0 auto;
+    padding: 5px;
+    color: #fff;
+    display: flex;
+    border-radius: 12px;
+    /*background-color: #b38add;*/
+    /*background as "glass"?*/
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.left {
+    width: 90%;
+    padding: 20px;
+}
+
+.calendar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: rgba(104, 104, 102, 0.808);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.calendar::before, .calendar::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 12px;
+    height: 97%;
+    border-radius: 0 5px 5px 0;
+    transform: translateY(-50%);
+    background-color: rgb(191, 189, 189);
+}
+
+.calendar::before {
+    height: 94%;
+    left: calc(100% + 12px);
+    background-color: rgb(153, 153, 153);
+}
+
+.calendar .month {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.calendar .month .prev, .calendar .month .next {
+    cursor: pointer;
+}
+
+.calendar .month .prev:hover, .calendar .month .next:hover {
+    color: var(--primary-color);
+}
+
+.calendar .weekdays {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.calendar .weekdays div{
+    width: 14.28%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar .days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.calendar .days .day {
+    width: 14.28%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--primary-color);
+    border: 1px solid #f5f5f5;
+}
+
+.calendar .day:not(.prev-date, .next-date):hover {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.calendar .days .prev-date, .calendar .days .next-date {
+    color: rgb(211, 210, 210);
+}
+
+.calendar .days .active {
+    position: relative;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.calendar .days .active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 2px var(--primary-color);
+}
+
+/*current day = today*/
+.calendar .days .today {
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.calendar .days .event {
+    position: relative;
+}
+
+.calendar .days .event::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 75%;
+    height: 6px;
+    border-radius: 20px;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+}
+
+.calendar .event:hover::after {
+    background-color: #fff;
+}
+
+.calendar .active.event::after {
+    background-color: #fff;
+    bottom: 20%;
+}
+
+.calendar .active.event {
+    padding-bottom: 10px;
+}
+
+.calendar .goto-today {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.calendar .goto-today .goto {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--primary-color);
+}
+
+.calendar .goto-today .goto input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    color: var(--primary-color);
+}
+
+.calendar .goto-today button {
+    padding: 5px 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.calendar .goto-today button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.calendar .goto-today .goto button {
+    border: none;
+    border-left: 1px solid var(--primary-color);
+    border-radius: 0;
+}
