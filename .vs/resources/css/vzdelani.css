@@ -167,9 +167,9 @@ header {
 
 .about {
     height: 500px;
-    align-items: center;
+    /*align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: center;*/
     color: rgba(246, 246, 244, 0.808);
     font-size: 30px;
     font-weight: 500;
@@ -178,10 +178,17 @@ header {
     /*display: inline-block;*/
 }
 
+.about h2 {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .about p {
-    font-size: 18px;
+    font-size: 14px;
     text-align: left;
     color: #fff;
+    margin-bottom: 50px;
 }
 
 .about h2 span {
@@ -189,11 +196,32 @@ header {
 }
 
 .about-info {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-right: 40px;
     width: 100%;
-    padding: 30px 100px;
-    display: flex;
+    padding: 30px 80px;
+    display: block;
+    justify-content: space-around;
+}
+
+.about-info a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 8px 10px 8px;
+    background: rgba(74, 161, 228, 0.836);
+    border-radius: 10px;
+    border: 2px solid rgba(74, 161, 228, 0.836);
+    font-weight: 500;
+    transition: .3s;
+    width: 80px;
+    height: 50px;
+    left: 20px;
+}
+
+.about-info a:hover {
+    color: rgba(74, 161, 228, 0.836);
+    background: transparent;
 }
 
 .portfolio {
