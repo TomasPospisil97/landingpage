@@ -12,6 +12,7 @@ const dateInput = document.querySelector(".date-input");
 const eventDay = document.querySelector(".event-day");
 const eventDate = document.querySelector(".event-date");
 const eventsContainer = document.querySelector(".events");
+const addEventSubmit = document.querySelector(".add-event-btn");
 
 
 let today = new Date();
@@ -36,25 +37,31 @@ const months = [
 
 //default event array
 
-const eventsArr = [
-    {
-        day: 28,
-        month: 7,
-        year: 2024,
-        events: [
-            { title: "Event 1", time: "10:00" },
-            { title: "Event 2", time: "12:00" },
-        ],
-    },
-    {
-        day: 18,
-        month: 7,
-        year: 2024,
-        events: [
-            { title: "Event 1", time: "10:00" },
-        ],
-    },
-];
+//const eventsArr = [
+  //  {
+    //    day: 28,
+      //  month: 7,
+        //year: 2024,
+        //events: [
+          //  { title: "Event 1", time: "10:00" },
+           // { title: "Event 2", time: "12:00" },
+        //],
+    //},
+    //{
+      //  day: 18,
+        //month: 7,
+        //year: 2024,
+        //events: [
+          //  { title: "Event 1", time: "10:00" },
+       // ],
+   // },
+//];
+
+//empty array
+let eventsArr = [];
+
+//call get
+getEvents();
 
 //pridani dnu
 
@@ -277,7 +284,7 @@ function addListner(){
 
             //call active day after click
             getActiveDay(e.target.innerHTML);
-            updateEvents(e.target.innerHTML);
+            updateEvents(Number(e.target.innerHTML));
 
             //remove active day from already active day
             days.forEach((day) => {
@@ -368,4 +375,163 @@ function updateEvents(date){
       }
     eventsContainer.innerHTML = events;
 
+    //save items when newis setup
+    saveEvents();
+
 };
+
+//function to add events
+addEventSubmit.addEventListener("click", () => {
+    const eventTitle = addEventTitle.value;
+    const eventTimeFrom = addEventFrom.value;
+    const eventTimeTo = addEventTo.value;
+
+    //validation with if()
+    if(eventTitle === "" || eventTimeFrom === "" || eventTimeTo === "" ) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    const timeFromArr = eventTimeFrom.split(":");
+    const timeToArr = eventTimeTo.split(":");
+
+    if(
+        timeFromArr.length !== 2 || 
+        timeToArr.length !== 2 || 
+        timeFromArr[0] > 23 || 
+        timeFromArr[1] > 59 ||
+        timeToArr[0] > 23 || 
+        timeToArr[1] > 59
+    ) {
+            alert("Invalid time format");
+    }
+    
+    const timeFrom = convertTime(eventTimeFrom);
+    const timeTo = convertTime(eventTimeTo);
+
+    const newEvent = {
+        title: eventTitle,
+        //time: `${timeFrom} - ${timeTo}`,
+        time: timeFrom + " - " + timeTo
+    };
+
+
+    let eventAdded = false;
+
+    //checkif eventarr is not empty
+    if(eventsArr.length > 0){
+        //check if thereare alreadysome event, add following
+        eventsArr.forEach((item) => {
+            if(
+                item.day === activeDay &&
+                item.month === month + 1 &&
+                item.year === year
+            ){
+                item.events.push(newEvent);
+                eventAdded = true;
+            }
+        })
+    };
+
+
+    //if event array is empty or current day does not haveany events
+    if(!eventAdded){
+        eventsArr.push({
+            day: activeDay,
+            month: month + 1,
+            year: year,
+            events: [newEvent]
+        })    
+    };
+
+
+    //removeactive from add event form
+    addEventContainer.classList.remove("active");
+
+    //clear the fields
+    addEventTitle.value = "";
+    addEventFrom.value = "";
+    addEventTo.value = "";
+
+    //show current added event
+    updateEvents(activeDay);
+
+
+    //add event class to new event,if not alreadydone
+    const activeDayElem = document.querySelector(".day.active");
+    if(!activeDayElem.classList.contains("event")){
+        activeDayElem.classList.add("event");
+    };
+
+});
+
+function convertTime (time){
+    let timeArr = time.split(":");
+    let timeHour = timeArr[0];
+    let timeMin = timeArr[1];
+    let timeFormat = timeHour >= 12 ? "PM" : "AM";
+    timeHour = timeHour % 12 || 12;
+    time = timeHour + ":" + timeMin + " " + timeFormat;
+    return time;
+};
+
+
+//function to remove event on click
+eventsContainer.addEventListener("click", (e) => {
+    if(e.target.classList.contains("event")){
+        const eventTitle = e.target.children[0].children[1].innerHTML;
+        //get the title of event => search  in array by title and delete
+        eventsArr.forEach((event) => {
+            if(
+                event.day === activeDay &&
+                event.month === month + 1 &&
+                event.year === year
+            ){
+                event.events.forEach((item, index) => {
+                    if(item.title === eventTitle){
+                        event.events.splice(index, 1);
+                    }
+                });
+
+                //if no event remains on that day, remove coplete day
+                if(event.events.length === 0){
+                    eventsArr.splice(eventsArr.indexOf(event), 1);
+                    //also remove active class of that day
+                    const activeDayElem = document.querySelector(".day.active");
+                    if(activeDayElem.classList.contains("event")){
+                        activeDayElem.classList.remove("event");
+                    }
+                }
+            }
+        });
+        //update the events
+        updateEvents(activeDay);
+    }
+
+
+
+
+});
+
+
+//store events in local storage and get them from it
+
+function saveEvents(){
+    localStorage.setItem("events", JSON.stringify(eventsArr));
+};
+
+//function getEvents(){
+  //  if(localStorage.getItem("events" === null)){
+    //    return;
+   // }
+    //eventsArr = JSON.parse(localStorage.getItem("events"));
+   // eventsArr.push(...JSON.parse(localStorage.getItem("events")));
+//};
+
+//this is the same fucntion,but works.. the function before did not work,cause it recieve "null" on every noew load of the page
+function getEvents(){
+    const storedEvents = localStorage.getItem("events");
+    if(storedEvents !== null){
+        eventsArr = JSON.parse(storedEvents);
+    }
+}
