@@ -535,3 +535,4 @@ function getEvents(){
         eventsArr = JSON.parse(storedEvents);
     }
 }
+

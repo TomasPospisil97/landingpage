@@ -34,7 +34,67 @@ html {
 }
 
 
+/* media queries */
 
+@media screen and (max-width: 1000px) {
+    body {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .container {
+      min-height: 100vh;
+      flex-direction: column;
+      border-radius: 0;
+    }
+    .container .left {
+      width: 100%;
+      height: 100%;
+      padding: 20px 0;
+    }
+    .container .right {
+      width: 100%;
+      height: 100%;
+      padding: 20px 0;
+    }
+    .calendar::before,
+    .calendar::after {
+      top: 100%;
+      left: 50%;
+      width: 97%;
+      height: 12px;
+      border-radius: 0 0 5px 5px;
+      transform: translateX(-50%);
+    }
+    .calendar::before {
+      width: 94%;
+      top: calc(100% + 12px);
+    }
+    .events {
+      padding-bottom: 340px;
+    }
+    .add-event-wrapper {
+      bottom: 100px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .calendar .month {
+      height: 75px;
+    }
+    .calendar .weekdays {
+      height: 50px;
+    }
+    .calendar .days .day {
+      height: 40px;
+      font-size: 0.8rem;
+    }
+    .calendar .days .day.active,
+    .calendar .days .day.today {
+      font-size: 1rem;
+    }
+    .right .today-date {
+      padding: 20px;
+    }
+  }
 
 
 
@@ -96,7 +156,7 @@ header {
     background: transparent;
 }
 
-@media only screen and (max-width: 600px) {
+/*@media only screen and (max-width: 600px) {
     header .desktop {
       display: none;
     }
@@ -104,7 +164,7 @@ header {
     header .content {
       padding: .5rem 0;
     }
-}
+}*/
 
 
 
@@ -617,3 +677,69 @@ header {
 .add-event i {
     pointer-events: none;
 }
+
+/*
+@media (max-width: 1000px) {
+    body{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .container{
+        min-height: 100vh;
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .container .left, .container .right{
+        width: 100%;
+        height: 100%;
+        padding: 20 0;
+    }
+
+    .calendar::before, .calendar::after{
+        top: 100%;
+        left: 50%;
+        width: 97%;
+        height: 12px;
+        border-radius: 0 0 5px 5px;
+        transform: translateX(-50%);
+    }
+
+    .calendar::before{
+        width: 94%;
+        top: calc(100% + 12px);
+    }
+
+    .events {
+        padding-bottom: 340px;
+    }
+
+    .add-event-wrapper{
+        bottom: 100px;
+    }
+}
+
+@media (max-width: 500px){
+    .calendar .month{
+        height: 75px;
+    }
+
+    .calendar .weekdays{
+        height: 50px;
+    }
+
+    .calendar .days .day{
+        height: 40px;
+        font-size: 0.8rem;
+    }
+
+    .calendar .days .day.active, .calendar .days .day.today{
+        font-size: 1rem;
+    }
+
+    .right .today-date{
+        padding: 20px;
+    }
+}
+    */

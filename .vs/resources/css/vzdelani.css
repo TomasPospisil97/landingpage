@@ -19,9 +19,13 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 0px;
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    justify-content: space-around;
     align-items: center;
     z-index: 100;
 }
@@ -52,6 +56,43 @@ header {
 .navigation a:hover {
     color: #fff;
 }
+
+/*languages teor drop-down*/
+.navigation .drop-down ul{
+    list-style: none;
+}
+
+.navigation ul.drop-down li{
+    display: block;
+    /*background*/
+}
+.navigation ul.drop-down{
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    background: #fff;
+}
+
+.navigation ul.drop-down li a:hover{
+    background: #fff;
+}
+.navigation .drop-down a:hover ul.drop-down{
+    display: block;
+}
+
+/*.navigation-lang a {
+    font-size: 1.1em;
+    color: rgba(246, 246, 244, 0.808);
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navigation-lang a:hover {
+    color: #fff;
+}*/
 
 .btn-connect {
     color: #fff;
