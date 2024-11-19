@@ -61,6 +61,97 @@
             of inventory management, transportation, and warehousing. 
             I am a team player and a quick learner who is always eager to take on new challenges and learn new skills. I am looking for a
             challenging and rewarding career in the software engineering field.</p>
+            <div class="about-info-options">
+                <div class="accordion">
+                    <a href="#" title="Education">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </a>
+                    <div class="panel">
+                        <p>
+                                Elementary School: Františka Palackého, Prostějov<br>
+                                2003 - 2012<br><br>
+                                High School: Gymnázium Jiřího Wolkera, Prostějov<br>
+                                2012 - 2016<br><br>
+                                Bachelor at University: Vysoká škola logistiky o.p.s., Přerov<br>
+                                2016 - 2019<br><br>
+                                Masters at University: Vysoká škola logistiky o.p.s., Přerov<br>
+                                2019 - 2021
+                        </p>
+                    </div>
+                </div>
+                    
+                <div class="accordion">
+                    <a href="#" title="Work Experience">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </a>
+                    <div class="panel">
+                        <p>
+                            Haulage transport expert/planner - SPOS TRANS, s.r.o.<br>
+                            March 2018 - January 2021<br><br>
+                            Haulage transport expert - FEE Transport, s.r.o.<br> 
+                            January 2021 - June 2021<br><br> 
+                            Logistic/Transport Coordinator - Astron Buildings s.r.o.<br> 
+                            June 2021 - April 2022<br><br> 
+                            MRP controller/Logistic disposition senior - Fischer automotive s.r.o.<br> 
+                            April 2022 - May 2024 
+                        </p>
+                    </div>
+                </div>
+                    
+                <div class="accordion">
+                    <a href="#" title="Software Experience">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </a>
+                    <div class="panel">
+                        <p>Details about my software experience and projects.</p>
+                    </div>
+                </div>
+                    
+                <div class="accordion">
+                    <a href="#" title="Languages">
+                        <i class="fa-solid fa-language"></i>
+                    </a>
+                    <div class="panel">
+                        <p>Czech Language - Fluent<br><br>  
+                           English Language - C1<br><br>  
+                           German Language - A2<br><br>  
+                        </p>
+                    </div>
+                </div>
+                <script>
+                    const accordions = document.querySelectorAll('.accordion > a');
+                
+                    accordions.forEach(acc => {
+                        acc.addEventListener('click', function(event) {
+                            event.preventDefault(); // Prevent default anchor behavior
+                            const panel = this.parentElement.querySelector('.panel'); // Get the corresponding panel
+                            
+                            // Close any open panels
+                            document.querySelectorAll('.panel').forEach(p => {
+                                if (p !== panel) {
+                                    p.classList.remove('active'); // Remove active class to hide
+                                }
+                            });
+                
+                            // Toggle the clicked panel
+                            panel.classList.toggle('active'); // Toggle active class for the clicked panel
+                        });
+                    });
+                
+                    // Click outside to close the panel
+                    document.addEventListener('click', function(event) {
+                        const isClickInsideAccordion = event.target.closest('.accordion');
+                        const isClickOnPanel = event.target.closest('.panel');
+                
+                        // If the click is outside of any accordion or panel, close all panels
+                        if (!isClickInsideAccordion && !isClickOnPanel) {
+                            document.querySelectorAll('.panel').forEach(p => {
+                                p.classList.remove('active'); // Remove active class to hide
+                            });
+                        }
+                    });
+                </script>
+            </div>
             <a href="#">Download my CV</a>
             <!--add a option to download a CV?; maybe some type of "box" with points of my knowledge etc.-->
         </div>
