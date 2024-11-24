@@ -4,7 +4,11 @@ const simpleGit = require('simple-git');
 
 // Database connection parameters
 const client = new Client({
-
+    user: 'postgres', 
+    host: 'localhost',
+    database: 'landing_page', 
+    password: 'postgres', 
+    port: 5432, 
 });
 
 async function connectDatabase() {
