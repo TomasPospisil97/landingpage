@@ -4,8 +4,23 @@ const simpleGit = require('simple-git');
 
 // Database connection parameters
 const client = new Client({
-
+    user: 'postgres', 
+    host: 'localhost',
+    database: 'landing_page', 
+    password: 'postgres', 
+    port: 5432, 
 });
+
+async function connectDatabase() {
+    try {
+        await client.connect();
+        console.log("Connected to the database.");
+    } catch (err) {
+        console.error("Failed to connect to the database:", err);
+    }
+}
+
+connectDatabase();
 
 // Initialize simple-git
 const git = simpleGit();
@@ -85,22 +100,19 @@ const git = simpleGit();
 // Function to insert commit data into the database
 async function insertCommits(data) {
     try {
-        // Connect to the database
-        await client.connect();
-
-        // Get the current maximum ID
+        
         const res = await client.query('SELECT MAX(id) AS max_id FROM github_push;');
         let currentId = res.rows[0].max_id || 0; // Start from 0 if no records exist
 
-        // Insert each commit into the database
+        
         for (let i = 0; i < data.length; i++) {
             const { message, date, time, files_changed, insertions, deletions } = data[i];
 
-            // Increment the ID for each commit
+            
             currentId++;
 
             try {
-                // Insert into the github_push table
+                
                 const insertQuery = `
                     INSERT INTO github_push (id, message, date, time, files_changed, insertions, deletions)
                     VALUES ($1, $2, $3, $4, $5, $6, $7);
@@ -116,51 +128,50 @@ async function insertCommits(data) {
     } catch (err) {
         console.error("An error occurred while connecting to the database:", err);
     } finally {
-        // Close the database connection
+        
         await client.end();
     }
 }
 
-// Function to fetch commits from the git repository
-async function fetchCommits() {
+// latest commit 
+async function fetchLatestCommit() {
     try {
-        const log = await git.log();
-        const commitData = await Promise.all(log.all.map(async commit => {
-            // Fetch the diff for the specific commit
-            const diff = await git.diff([commit.hash]); // Fetch diff for the specific commit
-            
-            // Analyze the diff to count insertions and deletions
-            const insertions = (diff.match(/\+/g) || []).length; // Count lines added
-            const deletions = (diff.match(/-/g) || []).length; // Count lines removed
-            
-            // Assuming `commit.files` is available and contains the necessary information
-            const filesChanged = commit.files ? commit.files.length : 0; // Use commit.files for accurate count
+        const log = await git.log({ n: 1 }); 
+        if (log.all.length === 0) {
+            console.log("No commits found.");
+            return null; 
+        }
 
-            return {
-                message: commit.message,
-                date: commit.date.split(' ')[0], // Extract date
-                time: commit.date.split(' ')[1], // Extract time
-                files_changed: filesChanged, // Accurate count of files changed
-                insertions: insertions, // Count of lines added
-                deletions: deletions, // Count of lines removed
-            };
-        }));
-        return commitData;
+        const commit = log.all[0]; 
+        const diff = await git.diff([commit.hash]); 
+
+        const insertions = (diff.match(/\+\S/g) || []).length; 
+        const deletions = (diff.match(/-\S/g) || []).length; 
+        const filesChanged = commit.files ? commit.files.length : 0; 
+
+        return {
+            message: commit.message,
+            date: commit.date.split(' ')[0], // date
+            time: commit.date.split(' ')[1] || '00:00:00', // time, default to '00:00:00'
+            files_changed: filesChanged, // files changed
+            insertions: insertions, //  lines added
+            deletions: deletions, //  lines removed
+        };
     } catch (err) {
-        console.error("Error fetching commits from git repository:", err);
-        return [];
+        console.error("Error fetching the latest commit from git repository:", err);
+        return null;
     }
 }
 
-// Main function to fetch and insert future commits
-async function insertFutureCommits() {
-    const newCommits = await fetchCommits();
-    if (newCommits.length > 0) {
-        await insertCommits(newCommits);
+// Main function 
+async function insertLatestCommit() {
+    const latestCommit = await fetchLatestCommit();
+    if (latestCommit) {
+        await insertCommits([latestCommit]); 
     } else {
         console.log("No new commits to insert.");
     }
 }
 
-// Automatically fetch and insert future commits
-setInterval(insertFutureCommits, 60000); // Check for new commits every minute
+
+setInterval(insertLatestCommit, 60000); 
