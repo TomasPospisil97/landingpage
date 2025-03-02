@@ -552,6 +552,90 @@ body {
     margin-right: 30px;
 }
 
+.contact-input {
+    width: 100%;
+    display: flex;
+    /*justify-content: space-between;*/
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contact-input input {
+    color: #fff;
+    background: none;
+    /*background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);*/
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+}
+
+.contact-input input:hover {
+    border: 1px solid rgba(74, 161, 228, 0.836);
+}
+
+.contact-input input.contact-inputs-email {
+    width: 260px;
+}
+
+.contact-text {
+    width: 100%;
+    height: 200px;
+}
+
+.contact-text textarea{
+    color: #fff;
+    width: 90%;
+    height: 90%;
+    background: none;
+    /*background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);*/
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.contact-text textarea:hover {
+    border: 1px solid rgba(74, 161, 228, 0.836);
+}
+
+.contact-button button {
+    width: 100px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    background: rgba(74, 161, 228, 0.836);
+    border-radius: 10px;
+    border: 2px solid rgba(74, 161, 228, 0.836);
+    font-weight: 500;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.contact-button button:hover {
+    color: rgba(74, 161, 228, 0.836);
+    background: transparent;
+}
+
+.contact-right .contact-inputs::placeholder {
+    color: #fff; 
+}
+
+.contact-right .contact-inputs-email::placeholder {
+    color: #fff; 
+}
+
+
+.contact-right textarea::placeholder {
+    color: #fff; 
+}
+
 /*USEFULL TIPS
 
 border-radius: 64px 48px 16px 96px; // interesting border look

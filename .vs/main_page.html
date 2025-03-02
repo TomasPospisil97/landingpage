@@ -207,7 +207,21 @@
                 </div>
             </div>
             <div class="contact-right">
-                <!--some type of form, input name, reason of contact and email add.-> I should recieve email, that this person wants to contact me beacuse of this or that-->
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <!--some type of form, input name, reason of contact and email add.-> I should recieve email, that this person wants to contact me beacuse of this or that-->
+                    <div class="contact-input">
+                        <input type="hidden" name="access_key" value="59819427-cd70-435b-9427-143fa5922d51">
+                        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                        <input type="text" name="email" placeholder="Your Email" class="contact-inputs-email" required>
+                    </div>
+                    <div class="contact-text">
+                        <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                        <!--<input type="text" name="text" placeholder="Your Message" class="contact-inputs" required>-->
+                    </div>
+                    <div class="contact-button">
+                        <button type="submit" class="contact-button">Send</button>
+                    </div>
+            </form>
             </div>
         </div>
     </section>
