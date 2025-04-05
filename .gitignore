@@ -1,0 +1,16 @@
+# Specific files to ignore
+passw.js
+
+# Specific directories to ignore
+node_modules/
+.vs/github_push_importer/
+
+# Standard exclusions (optional)
+.DS_Store
+*.log
+*.tmp
+*.bak
+
+# future:
+# - For files: just add the filename (e.g., 'secret.config')
+# - For directories: add the path ending with / ('private_data/')
