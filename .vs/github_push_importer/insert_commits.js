@@ -1,7 +1,7 @@
 //database info
 const { Client } = require('pg');
 const simpleGit = require('simple-git');
-
+//
 // Database connection parameters
 const client = new Client({
 //passw.js
@@ -21,7 +21,7 @@ connectDatabase();
 // Initialize simple-git
 const git = simpleGit();
 
-
+// manually inserted //
 //const commitData = [
    // { message: 'first commit', date: '2023-05-02', time: '19:12:00', files_changed: 1, insertions: 0, deletions: 0 },
     //{ message: 'pushed?', date: '2023-05-02', time: '19:14:00', files_changed: 37, insertions: 1409, deletions: 0 },
