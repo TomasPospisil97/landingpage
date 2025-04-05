@@ -1,3 +1,8 @@
+#password generator command line with database
 passw.js
+
+#importer
 github_push_importer/insert_commits.js
 
+#node_modules
+node_modules/

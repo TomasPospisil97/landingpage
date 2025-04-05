@@ -22,7 +22,7 @@ timerContainer.addEventListener("click", function()
 
 timerContainer.addEventListener("dblclick", function(){
     resetTimer();
-});
+});//funkce pro reset timer,viz konec filu
 
 function startTimer(){
     if(timeBegan === null)
