@@ -13,17 +13,17 @@ Also you can check my commit history to track my progress.
 #PROGRESS
 
 **GENERAL LOOK**
-* Nice background image.
-* Not too complicated for general visitor.
-* Color scheme: light blue and white.
-* Smooth scroll.
+* Nice background image. // DONE
+* Not too complicated for general visitor. // DONE
+* Color scheme: black and white. // DONE
+* Smooth scroll. // DONE
 
 1. **Header**: 
 * My name on the top-left corner. // DONE
 * Clear visualization of parts of the web page. // DONE
 * Possibility of quick contact => connect button. // DONE
 * Colorful design. // DONE
-* Responsive design. // NOT DONE
+* Responsive design. // DONE
 
 2. **Navigation**:
 * Part of the Header. // DONE
@@ -39,7 +39,7 @@ Also you can check my commit history to track my progress.
 4. **About**: 
 * Create about me section with short description of myself. // NOT DONE - needs to be adjusted
 * Add some general info, keep it short but longer that "HOME" section. // NOT DONE - needs to be adjusted
-* Add a option to download a CV? Maybe some type of "box" with points of my knowledge etc. // NOT DONE
+* Add a option to download a CV? Maybe some type of "box" with points of my knowledge etc. // DONE
 
 5. **Portfolio**:
 * Disclaimer: I will be doing projects as per tutorials, insructions articles/videos, etc.. I will try my best to include some of my own knowledge and I will adjust the Projects towards my personal use (It will not be a copy-paste or look exactly as the template).
@@ -55,7 +55,7 @@ Also you can check my commit history to track my progress.
 6. **Contact**: 
 * Contact section with short contact info. // DONE-still in progress
 * Add some animation/button with links to actual socials - github, linkedin etc.. . // DONE
-* Add a "form" for contacting me - fill up some data => I should recieve an email, that this person wants to contact me about this or that .. . // DONE-still in progress
+* Add a "form" for contacting me - fill up some data => I should recieve an email, that this person wants to contact me about this or that .. . // DONE
 
 7. **Languages**:
 * Add a roll-down possibility of language (only CZ and EN). // NOT DONE

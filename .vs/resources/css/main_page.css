@@ -41,7 +41,7 @@ header {
 }
 
 .logo span {
-    color: rgba(74, 161, 228, 0.836);
+    color: black;
 }
 
 .navigation {
@@ -50,7 +50,8 @@ header {
 
 .navigation a {
     font-size: 1.1em;
-    color: rgba(246, 246, 244, 0.808);
+    /*color: rgba(246, 246, 244, 0.808);*/
+    color: #fff;
     text-decoration: none;
     margin-right: 40px;
     font-weight: 500;
@@ -58,7 +59,7 @@ header {
 }
 
 .navigation a:hover {
-    color: #fff;
+    color: rgba(246, 246, 244, 0.808);
 }
 
 /*languages teor drop-down*/
@@ -68,7 +69,6 @@ header {
 
 .navigation ul.drop-down li{
     display: block;
-    /*background*/
 }
 .navigation ul.drop-down{
     width: 100%;
@@ -99,18 +99,18 @@ header {
 }*/
 
 .btn-connect {
-    color: #fff;
+    color: black;
     text-decoration: none;
     padding: 8px 35px;
-    background: rgba(74, 161, 228, 0.836);
+    background: rgba(246, 246, 244, 0.808);
     border-radius: 10px;
-    border: 2px solid rgba(74, 161, 228, 0.836);
+    border: 2px solid rgba(246, 246, 244, 0.808);
     font-weight: 500;
     transition: .3s;
 }
 
 .btn-connect:hover {
-    color: rgba(74, 161, 228, 0.836);
+    color:#fff;
     background: transparent;
 }
 
@@ -133,20 +133,24 @@ header {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 3px 100px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 130px;
+    padding-right: 100px;
 }
 
 .home img {
     width: 340px;
     height: 340px;
-    margin-left: 200px;
-    border: 5px solid rgba(74, 161, 228, 0.836);
+    margin-left: 220px;
+    border: 5px solid rgba(246, 246, 244, 0.808);
     border-radius: 170px;
+    margin-top: 80px;
 }
 
 .content {
     max-width: 500px;
-    color: #fff;
+    color:#fff;
 }
 
 .content h2 {
@@ -154,7 +158,7 @@ header {
 }
 
 .content h2 span {
-    color: rgba(74, 161, 228, 0.836);
+    color: black;
 }
 
 .content h4 {
@@ -166,18 +170,18 @@ header {
 }
 
 .btn-group a {
-    color: #fff;
+    color: black;
     text-decoration: none;
     padding: 10px 40px;
-    background: rgba(74, 161, 228, 0.836);
+    background: rgba(246, 246, 244, 0.808);
     border-radius: 10px;
-    border: 2px solid rgba(74, 161, 228, 0.836);
+    border: 2px solid rgba(246, 246, 244, 0.808);
     font-weight: 500;
     transition: .3s;
 }
 
 .btn-group a:hover {
-    color: rgba(74, 161, 228, 0.836);
+    color:#fff;
     background: transparent;
 }
 
@@ -192,12 +196,12 @@ header {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background: rgba(74, 161, 228, 0.836);
+    background: rgba(246, 246, 244, 0.808);
     margin-right: 22px;
     text-align: center;
     line-height: 35px;
     border: 1px solid #fff;
-    outline: 2px solid rgba(74, 161, 228, 0.836);
+    outline: 2px solid black;
     transition: .3s;
 }
 
@@ -213,15 +217,11 @@ header {
 
 .about {
     height: 500px;
-    /*align-items: center;
-    justify-content: center;
-    text-align: center;*/
-    color: rgba(246, 246, 244, 0.808);
+    color:#fff;
     font-size: 30px;
     font-weight: 500;
     padding-top: 70px;
     margin-top: 80px;
-    /*display: inline-block;*/
 }
 
 .about h2 {
@@ -238,7 +238,7 @@ header {
 }
 
 .about h2 span {
-    color: rgba(74, 161, 228, 0.836);
+    color:#fff;
 }
 
 .about-info {
@@ -264,10 +264,7 @@ header {
     margin-left: 20px;
     margin-right: 20px;
     text-decoration: none; 
-    /*color: #fff;*/
-    background: rgba(74, 161, 228, 0.836);
     border-radius: 10px;
-    border: 2px solid rgba(74, 161, 228, 0.836);
     box-sizing: border-box;
     font-weight: 500;
     transition: .3s;
@@ -277,6 +274,9 @@ header {
     justify-content: center; 
     align-items: center; 
     padding: 0;
+    color: black;
+    background: rgba(246, 246, 244, 0.808);
+    border: 2px solid rgba(246, 246, 244, 0.808);
 }
 
 .about-info-options a:hover {
@@ -290,7 +290,6 @@ header {
 
 .accordion {
     position: relative; 
-    
 }
 
 .accordion a:hover {
@@ -299,16 +298,16 @@ header {
 
 .accordion a {
     cursor: pointer;
-    
 }
 
 .panel {
+    color: black;
     position: absolute; 
     left: 100%; 
     top: -120px; 
     width: 300px; 
     padding: 20px;  
-    background-color: rgb(60, 130, 184);
+    background-color:#fff;
     border-radius: 5px; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     opacity: 0; 
@@ -324,18 +323,16 @@ header {
 
 
 .panel p {
+    color: black;
     margin: 0; 
     line-height: 1.5; 
 }
 
 .about-info a {
     font-size: 18px;
-    color: #fff;
     text-decoration: none;
     padding: 10px 8px 10px 8px;
-    background: rgba(74, 161, 228, 0.836);
     border-radius: 10px;
-    border: 2px solid rgba(74, 161, 228, 0.836);
     font-weight: 500;
     transition: .3s;
     width: 180px;
@@ -346,21 +343,24 @@ header {
     align-items: center;
     justify-content: center;
     display: flex; 
+    color: black;
+    background: rgba(246, 246, 244, 0.808);
+    border: 2px solid rgba(246, 246, 244, 0.808);
 }
 
 .about-info a:hover {
-    color: rgba(74, 161, 228, 0.836);
+    color:#fff;
     background: transparent;
 }
 
-/*PORTFOLIO*/
+/*PORTFOLIO #1*/
 
 .portfolio {
     height: 500px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: rgba(246, 246, 244, 0.808);
+    color:#fff;
     font-size: 30px;
     font-weight: 500;
     padding-top: 70px;
@@ -368,7 +368,7 @@ header {
 }
 
 .portfolio h2 span {
-    color: rgba(74, 161, 228, 0.836);
+    color:#fff;
 }
 
 .contact {
@@ -376,7 +376,7 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: rgba(246, 246, 244, 0.808);
+    color:#fff;
     font-size: 30px;
     font-weight: 500;
     padding-top: 60px;
@@ -384,7 +384,7 @@ header {
 }
 
 .contact h2 span {
-    color: rgba(74, 161, 228, 0.836);
+    color:#fff;
 }
 
 
@@ -392,9 +392,10 @@ header {
 
 
 body {
-    background-image: url(../images/mountainbackg7.jpg);
+    /*background-image: url(../images/mountainbackg7.jpg);*/
+    background-image: url(../images/backg0.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    /*background-position: center;*/
     background-attachment: fixed;
     background-size: cover;
     display: flex;
@@ -403,7 +404,7 @@ body {
 }
 
 
-/*PORTFOLIO*/
+/*PORTFOLIO #2*/
 
 .portfolio-items {
     display: inline-flex;
@@ -439,7 +440,7 @@ body {
 .flappy img {
     width: 140px;
     height: 200px;
-    border: 2px solid rgba(74, 161, 228, 0.836);
+    border: 2px solid black;
     transition: .3s;
     cursor: pointer;
 }
@@ -451,7 +452,7 @@ body {
 .calculator img {
     width: 140px;
     height: 200px;
-    border: 2px solid rgba(74, 161, 228, 0.836);
+    border: 2px solid black;
     transition: .3s;
     cursor: pointer;
 }
@@ -459,7 +460,7 @@ body {
 .random-facts img {
     width: 140px;
     height: 200px;
-    border: 2px solid rgba(74, 161, 228, 0.836);
+    border: 2px solid black;
     transition: .3s;
     cursor: pointer;
 }
@@ -467,7 +468,7 @@ body {
 .password img {
     width: 140px;
     height: 200px;
-    border: 2px solid rgba(74, 161, 228, 0.836);
+    border: 2px solid black;
     transition: .3s;
     cursor: pointer;
 }
@@ -503,7 +504,7 @@ body {
 .contact-left {
     display: block;
     margin-top: 30px;
-    margin-left: 100px;
+    margin-left: 130px;
     text-align: left;
 }
 
@@ -512,7 +513,7 @@ body {
 }
 
 .contact-socials {
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .contact-info .contact-left .contact-socials a {
@@ -520,13 +521,13 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgba(74, 161, 228, 0.836);
+    background: rgba(246, 246, 244, 0.808);
     margin-right: 22px;
     text-align: center;
     align-items: center;
     line-height: 40px;
     border: 1px solid #fff;
-    outline: 2px solid rgba(74, 161, 228, 0.836);
+    outline: 2px solid black;
     transition: .3s;
 }
 
@@ -555,7 +556,6 @@ body {
 .contact-input {
     width: 100%;
     display: flex;
-    /*justify-content: space-between;*/
     justify-content: space-around;
     align-items: center;
     z-index: 100;
@@ -566,17 +566,13 @@ body {
 .contact-input input {
     color: #fff;
     background: none;
-    /*background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);*/
     border-radius: 2px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 
 }
 
 .contact-input input:hover {
-    border: 1px solid rgba(74, 161, 228, 0.836);
+    border: 1px solid #fff;
 }
 
 .contact-input input.contact-inputs-email {
@@ -593,33 +589,29 @@ body {
     width: 90%;
     height: 90%;
     background: none;
-    /*background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);*/
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .contact-text textarea:hover {
-    border: 1px solid rgba(74, 161, 228, 0.836);
+    border: 1px solid #fff;
 }
 
 .contact-button button {
     width: 100px;
-    color: #fff;
+    color: black;
     text-decoration: none;
     padding: 10px;
-    background: rgba(74, 161, 228, 0.836);
+    background: rgba(246, 246, 244, 0.808);
     border-radius: 10px;
-    border: 2px solid rgba(74, 161, 228, 0.836);
+    border: 2px solid rgba(246, 246, 244, 0.808);
     font-weight: 500;
     transition: .3s;
     cursor: pointer;
 }
 
 .contact-button button:hover {
-    color: rgba(74, 161, 228, 0.836);
+    color: #fff;
     background: transparent;
 }
 
@@ -636,8 +628,9 @@ body {
     color: #fff; 
 }
 
-/*USEFULL TIPS
+/*USEFULL TIPS + NOTES
 
 border-radius: 64px 48px 16px 96px; // interesting border look
+Replace the color of socials images - from white to black
 
 */
