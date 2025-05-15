@@ -12,9 +12,10 @@ html {
 }
 
 body {
-    background-image: url(../images/mountainbackg7.jpg);
+    /*background-image: url(../images/mountainbackg7.jpg);*/
+    background-image: url(../images/backg0.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    /*background-position: center;*/
     background-attachment: fixed;
     background-size: cover;
     display: flex;
@@ -32,9 +33,13 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 0px;
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    justify-content: space-around;
     align-items: center;
     z-index: 100;
 }
@@ -46,7 +51,7 @@ header {
 }
 
 .logo span {
-    color: rgba(74, 161, 228, 0.836);
+    color: black;
 }
 
 .navigation {
@@ -55,7 +60,8 @@ header {
 
 .navigation a {
     font-size: 1.1em;
-    color: rgba(246, 246, 244, 0.808);
+    /*color: rgba(246, 246, 244, 0.808);*/
+    color: #fff;
     text-decoration: none;
     margin-right: 40px;
     font-weight: 500;
@@ -63,22 +69,22 @@ header {
 }
 
 .navigation a:hover {
-    color: #fff;
+    color: rgba(246, 246, 244, 0.808);
 }
 
 .btn-connect {
-    color: #fff;
+    color: black;
     text-decoration: none;
     padding: 8px 35px;
-    background: rgba(74, 161, 228, 0.836);
+    background: rgba(246, 246, 244, 0.808);
     border-radius: 10px;
-    border: 2px solid rgba(74, 161, 228, 0.836);
+    border: 2px solid rgba(246, 246, 244, 0.808);
     font-weight: 500;
     transition: .3s;
 }
 
 .btn-connect:hover {
-    color: rgba(74, 161, 228, 0.836);
+    color:#fff;
     background: transparent;
 }
 
@@ -119,12 +125,12 @@ header {
     /*font-size: 16px;
     background-color: #e0e1e1;*/
     border-radius: 5px;
-    color: #fff;
+    color: black;
     text-decoration: none;
     padding: 8px 35px;
-    background: rgba(74, 161, 228, 0.836);
+    background: rgba(246, 246, 244, 0.808);
     border-radius: 10px;
-    border: 2px solid rgba(74, 161, 228, 0.836);
+    border: 2px solid rgba(246, 246, 244, 0.808);
     font-weight: 500;
     transition: .3s;
     cursor: pointer;
@@ -132,12 +138,12 @@ header {
 }
 
 #button:hover {
-    background-color: rgb(246, 246, 244);
+    color:#fff;
+    background: transparent;
 }
   
 #button {
-    color: rgba(74, 161, 228, 0.836);
-    background: transparent;
+    color: black;
 }
 
 

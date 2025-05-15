@@ -1,7 +1,8 @@
 body {
-    background-image: url(../images/mountainbackg7.jpg);
+    /*background-image: url(../images/mountainbackg7.jpg);*/
+    background-image: url(../images/backg0.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    /*background-position: center;*/
     background-attachment: fixed;
     background-size: cover;
     display: flex;
@@ -14,7 +15,6 @@ main {
 }
 
 
-/* Header */
 /*GENERAL*/
 
 html {
@@ -30,6 +30,98 @@ html {
 
 
 /*HEADER*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 0px;
+    display: flex;
+    /*justify-content: space-between;*/
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2em;
+    color: rgba(246, 246, 244, 0.808);
+    cursor: default;
+}
+
+.logo span {
+    color: black;
+}
+
+.navigation {
+    margin-left: 20px;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    /*color: rgba(246, 246, 244, 0.808);*/
+    color: #fff;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navigation a:hover {
+    color: rgba(246, 246, 244, 0.808);
+}
+
+.btn-connect {
+    color: black;
+    text-decoration: none;
+    padding: 8px 35px;
+    background: rgba(246, 246, 244, 0.808);
+    border-radius: 10px;
+    border: 2px solid rgba(246, 246, 244, 0.808);
+    font-weight: 500;
+    transition: .3s;
+}
+
+.btn-connect:hover {
+    color:#fff;
+    background: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+    header .desktop {
+      display: none;
+    }
+  
+    header .content {
+      padding: .5rem 0;
+    }
+}
+
+
+#playboard {
+    background-image: url("../images/backroundimg.jpg");
+    width: 250px;
+    height: 450px;
+}
+
+
+
+/* OLD DESIGN
+
+body {
+    background-image: url(../images/mountainbackg7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 header {
     position: fixed;
@@ -94,11 +186,4 @@ header {
     header .content {
       padding: .5rem 0;
     }
-}
-
-
-#playboard {
-    background-image: url("../images/backroundimg.jpg");
-    width: 250px;
-    height: 450px;
-}
+}*/
